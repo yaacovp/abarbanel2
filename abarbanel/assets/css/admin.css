@@ -1,0 +1,71 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f0f4f8;
+  color: #333;
+  padding: 20px;
+}
+
+.admin-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+h2 {
+  color: #1a237e;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+form {
+  display: grid;
+  gap: 15px;
+}
+
+form label {
+  font-weight: bold;
+  display: block;
+}
+
+form input, form select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+button {
+  background: #1a237e;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: #0d1b50;
+}
+
+#downloadBtn {
+  background: #00695c;
+}
+
+#downloadBtn:hover {
+  background: #004d40;
+}
+
+#status {
+  margin-top: 20px;
+  padding: 10px;
+  background: #e8f5e9;
+  color: #2e7d32;
+  border-radius: 4px;
+  display: none;
+}

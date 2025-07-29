@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>À propos - Abarbanel</title>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+</head>
+<body>
+  <header>
+    <h1>Abarbanel</h1>
+  </header>
+
+  <nav>
+    <div>
+      <a href="index.html">Accueil</a>
+      <a href="a-propos.html">À propos</a>
+    </div>
+    <div class="lang-switch">
+      <button id="lang-fr">FR</button>
+      <button id="lang-en">EN</button>
+      <button id="lang-he">HE</button>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h2 id="about-title">À propos de Abarbanel</h2>
+    <p id="about-text">
+      Ce site est dédié à la diffusion de contenus audio sur la Torah. Il est en cours de développement.
+    </p>
+  </div>
+
+  <footer>
+    <a id="admin-link" href="admin/index.html">Espace Admin</a>
+  </footer>
+
+  <script src="assets/js/languages.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const updateText = () => {
+        document.body.className = window.currentLang === 'he' ? 'hebrew' : '';
+        document.getElementById('about-title').textContent = translations[window.currentLang]?.aboutTitle || 'À propos';
+        document.getElementById('about-text').textContent = translations[window.currentLang]?.aboutText || 'Texte par défaut.';
+      };
+
+      window.currentLang = 'fr';
+      document.getElementById('lang-fr').addEventListener('click', () => { window.currentLang = 'fr'; updateText(); });
+      document.getElementById('lang-en').addEventListener('click', () => { window.currentLang = 'en'; updateText(); });
+      document.getElementById('lang-he').addEventListener('click', () => { window.currentLang = 'he'; updateText(); });
+      updateText();
+    });
+  </script>
+</body>
+</html>

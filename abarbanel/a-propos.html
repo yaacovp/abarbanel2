@@ -1,54 +1,48 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" dir="ltr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>À propos - Abarbanel</title>
-  <link rel="stylesheet" href="assets/css/style.css"/>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <header>
-    <h1>Abarbanel</h1>
+  <header class="header">
+    <div class="container">
+      <img src="assets/images/logo.svg" alt="Logo Abarbanel" class="logo">
+      <h1>Abarbanel</h1>
+      <nav class="nav">
+        <a href="index.html">Accueil</a>
+        <a href="a-propos.html">À propos</a>
+        <select id="lang-switch" class="lang-switch">
+          <option value="fr">FR</option>
+          <option value="en">EN</option>
+          <option value="he">HE</option>
+        </select>
+      </nav>
+    </div>
   </header>
 
-  <nav>
-    <div>
-      <a href="index.html">Accueil</a>
-      <a href="a-propos.html">À propos</a>
-    </div>
-    <div class="lang-switch">
-      <button id="lang-fr">FR</button>
-      <button id="lang-en">EN</button>
-      <button id="lang-he">HE</button>
-    </div>
-  </nav>
+  <main class="main">
+    <section class="about">
+      <h2>À propos de Rabbi Abarbanel</h2>
+      <p>
+        [Contenu fictif] Rabbi Abarbanel est un érudit renommé, connu pour ses enseignements profonds sur la Torah et les Prophètes. 
+        Ce site rassemble ses enseignements audio, organisés par Sefer et Paracha, afin de faciliter l'étude continue.
+      </p>
+      <p>
+        Les contenus sont disponibles en français, anglais et hébreu, avec une interface intuitive et accessible sur tous appareils.
+      </p>
+    </section>
+  </main>
 
-  <div class="container">
-    <h2 id="about-title">À propos de Abarbanel</h2>
-    <p id="about-text">
-      Ce site est dédié à la diffusion de contenus audio sur la Torah. Il est en cours de développement.
-    </p>
-  </div>
-
-  <footer>
-    <a id="admin-link" href="admin/index.html">Espace Admin</a>
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Abarbanel. Tous droits réservés.</p>
+      <a href="admin/index.html" class="admin-link">Espace Admin</a>
+    </div>
   </footer>
 
-  <script src="assets/js/languages.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const updateText = () => {
-        document.body.className = window.currentLang === 'he' ? 'hebrew' : '';
-        document.getElementById('about-title').textContent = translations[window.currentLang]?.aboutTitle || 'À propos';
-        document.getElementById('about-text').textContent = translations[window.currentLang]?.aboutText || 'Texte par défaut.';
-      };
-
-      window.currentLang = 'fr';
-      document.getElementById('lang-fr').addEventListener('click', () => { window.currentLang = 'fr'; updateText(); });
-      document.getElementById('lang-en').addEventListener('click', () => { window.currentLang = 'en'; updateText(); });
-      document.getElementById('lang-he').addEventListener('click', () => { window.currentLang = 'he'; updateText(); });
-      updateText();
-    });
-  </script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>

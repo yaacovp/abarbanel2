@@ -1,48 +1,100 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Admin – Abarbanel</title>
-  <link rel="stylesheet" href="../assets/css/admin.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - Abarbanel</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    .admin-container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #f9f9f9;
+      border-radius: 10px;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      padding: 12px 20px;
+      background: #2c3e50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #1a2530;
+    }
+    .warning {
+      background: #fff3cd;
+      color: #856404;
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+  </style>
 </head>
 <body>
-  <div class="admin-container">
-    <h2>Ajouter un nouvel audio</h2>
+  <header class="header">
+    <div class="container">
+      <h1>🛠️ Espace Administration</h1>
+      <a href="../index.html" class="back-link">← Retour au site</a>
+    </div>
+  </header>
+
+  <main class="admin-container">
+    <p class="warning">
+      ⚠️ Cet espace est local. Aucune sauvegarde automatique. Téléchargez le fichier JSON après ajout.
+    </p>
 
     <form id="audio-form">
-      <label>Lien YouTube</label>
-      <input type="url" id="youtubeUrl" required placeholder="https://youtube.com/watch?v=..."/>
-
-      <label>Titre (FR)</label>
-      <input type="text" id="titleFr" required />
-
-      <label>Titre (EN)</label>
-      <input type="text" id="titleEn" />
-
-      <label>Titre (HE)</label>
-      <input type="text" id="titleHe" />
-
-      <label>Séfer</label>
-      <select id="sefer" required>
-        <option value="">Choisir...</option>
-        <option value="Beréchit">Beréchit</option>
-        <option value="Chemot">Chemot</option>
-        <option value="Vayikra">Vayikra</option>
-        <option value="Bamidbar">Bamidbar</option>
-        <option value="Devarim">Devarim</option>
-      </select>
-
-      <label>Paracha</label>
-      <select id="parasha" required></select>
-
-      <button type="button" id="addBtn">Ajouter</button>
-      <button type="button" id="downloadBtn">Télécharger le JSON</button>
+      <div class="form-group">
+        <label>Titre</label>
+        <input type="text" id="title" required>
+      </div>
+      <div class="form-group">
+        <label>URL YouTube (lien embed)</label>
+        <input type="url" id="url" placeholder="https://www.youtube.com/embed/..." required>
+      </div>
+      <div class="form-group">
+        <label>Sefer</label>
+        <select id="sefer" required>
+          <option value="Beréchit">Beréchit</option>
+          <option value="Chemot">Chemot</option>
+          <option value="Vayikra">Vayikra</option>
+          <option value="Bamidbar">Bamidbar</option>
+          <option value="Devarim">Devarim</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Paracha</label>
+        <input type="text" id="parasha" required>
+      </div>
+      <button type="submit">Ajouter l'audio</button>
     </form>
 
-    <div id="status"></div>
-  </div>
+    <div id="current-data" style="margin-top: 30px;">
+      <h3>Données actuelles (JSON)</h3>
+      <textarea id="json-output" rows="10" readonly></textarea>
+      <button id="download-json" style="margin-top: 10px;">Télécharger audios.json</button>
+    </div>
+  </main>
 
+  <script src="../assets/js/fuse.min.js"></script>
+  <script src="../assets/js/FileSaver.min.js"></script>
   <script src="../assets/js/admin.js"></script>
 </body>
 </html>

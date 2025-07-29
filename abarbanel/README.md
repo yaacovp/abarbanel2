@@ -1,53 +1,43 @@
-# 📄 Projet Abarbanel – README
+# 📚 Projet Abarbanel – Documentation
 
-## 🎯 Présentation
-Site statique multilingue pour la diffusion de contenus audio (YouTube) organisés par Sefer et Paracha.
-
----
-
-## 📦 Fonctionnalités
-- Navigation multilingue (FR / EN / HE)
-- Recherche et filtres dynamiques
-- Interface d’administration locale
-- Responsive mobile-first
-- 100% statique – aucun backend requis
+Site web statique multilingue pour la diffusion d'études audio Torah.
 
 ---
 
-## 🛠️ Utilisation
+## 🚀 Déploiement
 
-### 🔹 Ajouter un audio
-1. Ouvrir `admin/index.html` dans votre navigateur.
-2. Remplir le formulaire avec :
-   - Lien YouTube
-   - Titres (FR, EN, HE)
-   - Séfer et Paracha
-3. Cliquez sur **Ajouter**.
-4. Cliquez sur **Télécharger le JSON**.
-5. Remplacez le fichier `data/audios.json` par le nouveau.
-
-### 🔹 Modifier les textes statiques
-- Page "À propos" : modifier le texte dans `a-propos.html` ou dans `languages.js` (`aboutText`).
-- Traductions : éditer `assets/js/languages.js`.
-
-### 🔹 Déployer
-Le site est entièrement statique. Déployez-le sur :
-- **GitHub Pages** : push sur `main` → Settings → Pages
-- **Netlify** : glisser-déposer le dossier
-- **Vercel** : `vercel` CLI
+1. Clonez ou téléchargez ce projet.
+2. Déployez sur GitHub Pages, Netlify, Vercel, ou tout hébergeur statique.
+   - Sur GitHub : `Settings > Pages > Source: Deploy from a branch (main)`
 
 ---
 
-## ⚠️ Attention
-- L’interface admin est **locale uniquement** (pas de sauvegarde serveur).
-- Ne pas utiliser sur un réseau public sans précaution.
-- Toujours sauvegarder `audios.json`.
+## 🛠️ Ajouter un audio via l'interface Admin
+
+1. Ouvrez `/admin/index.html` dans votre navigateur.
+2. Remplissez le formulaire :
+   - **Titre** : Nom de l'étude
+   - **URL YouTube** : Utilisez le lien `embed` (ex: `https://www.youtube.com/embed/abc123`)
+   - **Sefer** : Choisissez dans la liste
+   - **Paracha** : Tapez le nom (ex: Béréchit)
+3. Cliquez sur **Ajouter l'audio**.
+4. Cliquez sur **Télécharger audios.json**.
+5. Remplacez le fichier `data/audios.json` par le nouveau téléchargé.
+
+✅ L’audio apparaîtra automatiquement sur le site après rafraîchissement.
 
 ---
 
-## 🧑‍💻 Développé avec
-- HTML5 / CSS3 / JavaScript
-- Pas de framework
-- Compatible tous navigateurs
+## 🔁 Remplacer manuellement le fichier `audios.json`
 
-✅ Prêt à l’emploi.
+1. Modifiez `data/audios.json` directement avec un éditeur de texte.
+2. Respectez le format :
+```json
+{
+  "id": 1,
+  "title": "Mon titre",
+  "url": "https://www.youtube.com/embed/...",
+  "sefer": "Beréchit",
+  "parasha": "Noa'h",
+  "date": "2025-04-05"
+}

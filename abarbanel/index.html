@@ -1,59 +1,47 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" dir="ltr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Abarbanel - Accueil</title>
-  <link rel="stylesheet" href="assets/css/style.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abarbanel - Études Audio Torah</title>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <header>
-    <h1>Abarbanel</h1>
+  <header class="header">
+    <div class="container">
+      <img src="assets/images/logo.svg" alt="Logo Abarbanel" class="logo">
+      <h1>Abarbanel</h1>
+      <nav class="nav">
+        <a href="index.html">Accueil</a>
+        <a href="a-propos.html">À propos</a>
+        <select id="lang-switch" class="lang-switch">
+          <option value="fr">FR</option>
+          <option value="en">EN</option>
+          <option value="he">HE</option>
+        </select>
+      </nav>
+    </div>
   </header>
 
-  <nav>
-    <div>
-      <a href="index.html">Accueil</a>
-      <a href="a-propos.html">À propos</a>
+  <main class="main">
+    <section class="hero">
+      <h2>Bienvenue sur Abarbanel</h2>
+      <p>Découvrez plus de 200 études audio classées par Sefer et Paracha.</p>
+    </section>
+
+    <section class="featured">
+      <h3>Études en vedette</h3>
+      <div id="featured-audios" class="audio-grid"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Abarbanel. Tous droits réservés.</p>
+      <a href="admin/index.html" class="admin-link">Espace Admin</a>
     </div>
-    <div class="lang-switch">
-      <button id="lang-fr">FR</button>
-      <button id="lang-en">EN</button>
-      <button id="lang-he">HE</button>
-    </div>
-  </nav>
-
-  <div class="container">
-    <h2>Derniers audios</h2>
-
-    <div class="filters">
-      <input type="text" id="search" placeholder="Rechercher..." />
-      <select id="filter-sefer">
-        <option value="">Tous les Séfarim</option>
-        <option value="Beréchit">Beréchit</option>
-        <option value="Chemot">Chemot</option>
-        <option value="Vayikra">Vayikra</option>
-        <option value="Bamidbar">Bamidbar</option>
-        <option value="Devarim">Devarim</option>
-      </select>
-      <select id="filter-parasha">
-        <option value="">Toutes les Parachot</option>
-      </select>
-      <select id="sort">
-        <option value="">Trier...</option>
-        <option value="name">Nom</option>
-        <option value="date">Date</option>
-      </select>
-    </div>
-
-    <div id="audio-list" class="audio-list"></div>
-  </div>
-
-  <footer>
-    <a id="admin-link" href="admin/index.html">Espace Admin</a>
   </footer>
 
-  <script src="assets/js/languages.js"></script>
-  <script src="assets/js/app.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>

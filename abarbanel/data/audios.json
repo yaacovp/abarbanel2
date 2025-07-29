@@ -1,146 +1,42 @@
 [
   {
     "id": 1,
-    "title": {
-      "fr": "Paracha Béréchit",
-      "en": "Parasha Bereishit",
-      "he": "פרשת בראשית"
-    },
+    "title": "Introduction à Beréchit",
+    "url": "https://www.youtube.com/embed/dQw4w9WgXcQ",
     "sefer": "Beréchit",
     "parasha": "Béréchit",
-    "youtubeId": "RkJtG9unkN4",
-    "date": "2024-01-15"
+    "date": "2023-09-15"
   },
   {
     "id": 2,
-    "title": {
-      "fr": "Paracha Noa'h",
-      "en": "Parasha Noach",
-      "he": "פרשת נח"
-    },
+    "title": "La Création du Monde",
+    "url": "https://www.youtube.com/embed/dQw4w9WgXcQ",
     "sefer": "Beréchit",
-    "parasha": "Noa'h",
-    "youtubeId": "RkJtG9unkN4",
-    "date": "2024-01-22"
+    "parasha": "Béréchit",
+    "date": "2023-09-22"
   },
   {
     "id": 3,
-    "title": {
-      "fr": "Paracha Lekh Lekha",
-      "en": "Parasha Lech Lecha",
-      "he": "פרשת לך לך"
-    },
+    "title": "Noa'h et le Déluge",
+    "url": "https://www.youtube.com/embed/dQw4w9WgXcQ",
     "sefer": "Beréchit",
-    "parasha": "Lekh Lekha",
-    "youtubeId": "RkJtG9unkN4",
-    "date": "2024-01-29"
+    "parasha": "Noa'h",
+    "date": "2023-09-29"
   },
   {
     "id": 4,
-    "title": {
-      "fr": "Paracha Vayera",
-      "en": "Parasha Vayera",
-      "he": "פרשת וירא"
-    },
-    "sefer": "Beréchit",
-    "parasha": "Vayera",
-    "youtubeId": "RkJtG9unkN4",
-    "date": "2024-02-05"
+    "title": "L'Exode et les Plaies",
+    "url": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "sefer": "Chemot",
+    "parasha": "Chémot",
+    "date": "2023-10-05"
   },
   {
     "id": 5,
-    "title": {
-      "fr": "Paracha Chémot",
-      "en": "Parasha Shemot",
-      "he": "פרשת שמות"
-    },
-    "sefer": "Chemot",
-    "parasha": "Chémot",
-    "youtubeId": "RkJtG9unkN4",
-    "date": "2024-02-12"
-  },
-  {
-    "id": 6,
-    "title": {
-      "fr": "Paracha Vaéra",
-      "en": "Parasha Vaera",
-      "he": "פרשת וארא"
-    },
-    "sefer": "Chemot",
-    "parasha": "Vaéra",
-    "youtubeId": "RkJtG9unkN4",
-    "date": "2024-02-19"
-  },
-  {
-    "id": 7,
-    "title": {
-      "fr": "Paracha Bo",
-      "en": "Parasha Bo",
-      "he": "פרשת בא"
-    },
-    "sefer": "Chemot",
-    "parasha": "Bo",
-    "youtubeId": "RkJtG9unkN4",
-    "date": "2024-02-26"
-  },
-  {
-    "id": 8,
-    "title": {
-      "fr": "Paracha Tzav",
-      "en": "Parasha Tzav",
-      "he": "פרשת צו"
-    },
+    "title": "La Loi et le Sinaï",
+    "url": "https://www.youtube.com/embed/dQw4w9WgXcQ",
     "sefer": "Vayikra",
-    "parasha": "Tzav",
-    "youtubeId": "RkJtG9unkN4",
-    "date": "2024-03-10"
-  },
-  {
-    "id": 9,
-    "title": {
-      "fr": "Paracha Kedochim",
-      "en": "Parasha Kedoshim",
-      "he": "פרשת קדושים"
-    },
-    "sefer": "Vayikra",
-    "parasha": "Kedochim",
-    "youtubeId": "RkJtG9unkN4",
-    "date": "2024-03-17"
-  },
-  {
-    "id": 10,
-    "title": {
-      "fr": "Paracha Chla'h Lekha",
-      "en": "Parasha Shelach",
-      "he": "פרשת שלח"
-    },
-    "sefer": "Bamidbar",
-    "parasha": "Chla'h Lekha",
-    "youtubeId": "RkJtG9unkN4",
-    "date": "2024-04-01"
-  },
-  {
-    "id": 11,
-    "title": {
-      "fr": "Paracha Balak",
-      "en": "Parasha Balak",
-      "he": "פרשת בלק"
-    },
-    "sefer": "Bamidbar",
-    "parasha": "Balak",
-    "youtubeId": "RkJtG9unkN4",
-    "date": "2024-04-08"
-  },
-  {
-    "id": 12,
-    "title": {
-      "fr": "Paracha Devarim",
-      "en": "Parasha Devarim",
-      "he": "פרשת דברים"
-    },
-    "sefer": "Devarim",
-    "parasha": "Devarim",
-    "youtubeId": "RkJtG9unkN4",
-    "date": "2024-07-18"
+    "parasha": "Yitro",
+    "date": "2023-10-12"
   }
 ]

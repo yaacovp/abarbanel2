@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beréchit - Abarbanel</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <img src="../assets/images/logo.svg" alt="Logo Abarbanel" class="logo">
+      <h1>Sefer Beréchit</h1>
+      <nav class="nav">
+        <a href="../index.html">Accueil</a>
+        <a href="../a-propos.html">À propos</a>
+        <select id="lang-switch" class="lang-switch">
+          <option value="fr">FR</option>
+          <option value="en">EN</option>
+          <option value="he">HE</option>
+        </select>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="controls">
+      <input type="text" id="search" placeholder="Rechercher un audio..." class="search-input">
+      <select id="parasha-filter" class="filter-select">
+        <option value="">Toutes les parachiot</option>
+      </select>
+    </div>
+    <div id="audio-list" class="audio-list"></div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Abarbanel. Tous droits réservés.</p>
+      <a href="../admin/index.html" class="admin-link">Espace Admin</a>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      loadSefer('Beréchit');
+    });
+  </script>
+</body>
+</html>
